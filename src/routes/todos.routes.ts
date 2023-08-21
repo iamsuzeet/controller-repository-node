@@ -1,14 +1,16 @@
 import * as express from 'express';
-import {
-  getAllTodos,
-  getTodoById,
-  postTodo,
-  deleteTodoById,
-  updateTodoStatusById,
-  updateTodoById,
-} from '../controllers/todos/todos.controller';
+import TodoController from '../core/todo/todos.controller';
 
 const todoRouter = express.Router();
+
+const {
+  getAllTodos,
+  postTodo,
+  getTodoById,
+  deleteTodoById,
+  updateTodoById,
+  updateTodoStatusById,
+} = TodoController;
 
 todoRouter.route('/').get(getAllTodos).post(postTodo);
 

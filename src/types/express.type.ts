@@ -1,6 +1,6 @@
 import * as express from 'express';
 
-export interface IExpressRequest extends express.Request {}
+export interface IExpressRequest<T = any> extends express.Request<T> {}
 
 export interface IExpressResponse extends express.Response {}
 export interface IExpressNextFunction extends express.NextFunction {}
